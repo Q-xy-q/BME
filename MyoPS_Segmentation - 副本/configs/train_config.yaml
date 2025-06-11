@@ -1,0 +1,9 @@
+# Training hyperparameters
+epochs: 100
+batch_size: 4 # Adjust based on your GPU memory. 4 is a safe start for a 4090.
+learning_rate: 0.001
+
+# Output configuration
+output_dir: 'outputs'
+model_filename: 'myops_runet_best.h5'
+log_dir: 'outputs/logs'

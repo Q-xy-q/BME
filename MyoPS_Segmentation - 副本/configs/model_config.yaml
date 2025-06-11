@@ -1,0 +1,6 @@
+# Model architecture parameters
+model_name: 'RUNet'
+input_shape: [256, 256, 3]
+num_classes: 6
+filters: 16 # Initial number of filters in the first convolutional layer of U-Net
+dropout: 0.2

@@ -1,0 +1,9 @@
+tensorflow
+nibabel
+numpy
+scikit-image
+scipy
+imgaug
+pyyaml
+matplotlib
+tqdm

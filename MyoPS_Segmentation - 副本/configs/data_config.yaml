@@ -1,0 +1,30 @@
+# Path configurations
+raw_data_dir: 'data/raw'
+train_dir: 'data/raw/Train'
+test_dir: 'data/raw/Test'
+split_dir: 'data/splits'
+
+# Image and data specifications
+img_size: [256, 256]
+n_classes: 6 # 0: background, 1: RV, 2: LV-bloodpool, 3: LV-myo, 4: edema, 5: scar
+n_channels: 3 # C0, LGE, T2
+
+# Class mapping from .nii.gz ground truth values to model's categorical values
+# RV: 500, LV-bloodpool: 600, LV-myo: 200, Edema: 1220, Scar: 2221
+# We map them to 1, 2, 3, 4, 5 respectively. Background is 0.
+label_map:
+  200: 3  # LV Myocardium
+  500: 1  # RV
+  600: 2  # LV Blood Pool
+  1220: 4 # Edema
+  2221: 5 # Scar
+
+# File naming conventions
+c0_suffix: '_C0.nii.gz'
+lge_suffix: '_LGE.nii.gz'
+t2_suffix: '_T2.nii.gz'
+gd_suffix: '_gd.nii.gz'
+
+# Data split configuration
+validation_split: 0.2
+seed: 42
